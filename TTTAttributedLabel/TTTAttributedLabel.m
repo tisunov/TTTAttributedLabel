@@ -1487,7 +1487,7 @@ afterInheritingLabelAttributesAndConfiguringWithBlock:(NSMutableAttributedString
                withEvent:(UIEvent *)event
 {
     if (self.activeLink) {
-        self.activeLink = nil;
+        [self touchesEnded:touches withEvent:event];
     } else {
         [super touchesCancelled:touches withEvent:event];
     }
